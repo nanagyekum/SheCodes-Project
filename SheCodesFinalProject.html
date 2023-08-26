@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greek Yogurt 🥛</title>
+  </head>
+  <body style="background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)">
+    <div class="container">
+      <style>
+        h1 {
+          text-align: center;
+        }
+        h2 {
+          text-align: center;
+          border: 1px solid #885df1;
+          line-height: 1.5;
+        }
+        img {
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          width: 200px;
+          display: block;
+          padding: 20px;
+          max-width: 100%;
+        }
+        p {
+          text-align: center;
+          font-size: large;
+          max-width: 100%;
+        }
+
+        .learn-more {
+          display: block;
+          margin-bottom: auto;
+          text-decoration: none;
+        }
+        .footer {
+          font-size: small;
+        }
+        a {
+          font-size: small;
+        }
+        button {
+          border-radius: 25px;
+          margin: 0 auto;
+          display: block;
+          background-color: #fff;
+          border: 1px solid #885df1;
+          color: #885df1;
+          font-size: 16px;
+          line-height: 22px;
+          padding: 16px 24px;
+          text-decoration: none;
+          transition: all 200ms ease;
+          box-shadow: 5px 5px 10px;
+        }
+        button:hover {
+          color: #fff;
+          background: #885df1;
+          cursor: pointer;
+        }
+      </style>
+      <h1>I <em> love </em>Yogurt</h1>
+      <h2>Especially Greek Yogurt</h2>
+      <br />
+      <hr />
+      <img
+        src="https://www.itisakeeper.com/wp-content/uploads/2022/07/Greek-Yogurt-Parfait-with-Fruit-and-Granola-HERO1-scaled.jpg"
+        alt="Greek Yogurt"
+      />
+      <hr />
+      <p>
+        Strained yogurt, Greek yogurt, yogurt cheese, or sack yoghurt is yogurt
+        that has been strained to remove most of its whey, <br />
+        resulting in a thicker consistency than unstrained yogurt, while
+        preserving yogurt's distinctive sour taste. <br />
+      </p>
+      <p>👇🏿 Subscribe to our news letter below! 👇🏿</p>
+      <a
+        href="https://en.wikipedia.org/wiki/Strained_yogurt"
+        target="_blank"
+        class="learn-more"
+      >
+        Read more on Wikipedia
+      </a>
+      <button class="Subscribe">Yogurt Lover? Subscribe now!</button>
+      <p class="footer">
+        This page was built by
+        <a href="https://github.com/nanagyekum" target="_blank">
+          Nana Agyekum
+        </a>
+      </p>
+    </div>
+    <script>
+      function Subscribe() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let email = prompt("Whats your email?");
+        let heading = document.querySelector("h1");
+        let heading2 = document.querySelector("h2");
+
+        if (age >= 18) {
+          heading.innerHTML = "Hi " + name + ", Thanks for subscribing!";
+          heading2.innerHTML = "You'll recieve an email shortly!";
+        } else {
+          heading.innerHTML =
+            "Sorry " + name + ", You <em> cannot </em> subscribe!";
+          heading2.innerHTML = "Maybe next time.";
+        }
+      }
+
+      let subscribeButton = document.querySelector("button");
+      subscribeButton.addEventListener("click", Subscribe);
+    </script>
+  </body>
+</html>
