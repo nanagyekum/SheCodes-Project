@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.cdnfonts.com/css/barbie-6" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Code like Barbie!</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="https://shop.mattel.com/pages/barbie" class="logo">
+        Hi Barbie!
+      </a>
+      <div class="menuBtn"></div>
+      <nav class="navBar">
+        <a href="" style="--i: 1" class="Main">Home </a>
+        <a
+          href="https://www.history.com/news/barbie-through-the-ages"
+          style="--i: 2"
+          >History
+        </a>
+        <a
+          href="https://www.radiotimes.com/movies/barbie-movie-cast/"
+          style="--i: 3"
+          >Actors
+        </a>
+        <a href="https://www.imdb.com/title/tt1517268/awards/" style="--i: 4"
+          >Awards
+        </a>
+        <a href="#" style="--i: 5">Gallary </a>
+      </nav>
+    </header>
+    <section class="Intro">
+      <div class="content">
+        <h1>
+          Welcome to BarbieLand! <br />
+          <span>(Kens are here too)</span>
+        </h1>
+        <p>
+          Margot Robbie plays Barbie! The overzealous, fun-loving, classic doll!
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Margot_Robbie"> Learn More </a>
+      </div>
+      <div class="socialMedia">
+        <a href="https://www.linkedin.com/in/nanagyekum/" style="--i: 1">
+          <i class="bx bxl-linkedin"></i
+        ></a>
+        <a href="https://github.com/nanagyekum" style="--i: 2">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a href="https://www.instagram.com/nanagyekum/" style="--i: 3">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a href="https://www.backstage.com/u/nana-agyekum/" style="--i: 4">
+          <i class="bx bx-bold"></i>
+        </a>
+      </div>
+    </section>
+    <script type="text/javascript">
+      // Javascript for navigation menu
+      const menuBtn = document.querySelector(".menuBtn");
+
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
