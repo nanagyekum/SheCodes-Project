@@ -32,19 +32,52 @@
         <a href="https://www.imdb.com/title/tt1517268/awards/" style="--i: 4"
           >Awards
         </a>
-        <a href="#" style="--i: 5">Gallary </a>
+        <a
+          href="https://barbiemovies.fandom.com/wiki/Category:Galleries"
+          style="--i: 5"
+          >Gallary
+        </a>
       </nav>
     </header>
     <section class="Intro">
+      <video
+        class="vidSlider"
+        src="images/wavingbarbie.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="vidSlider"
+        src="images/justken1.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="vidSlider"
+        src="images/issainbarb.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+
       <div class="content">
         <h1>
           Welcome to BarbieLand! <br />
           <span>(Kens are here too)</span>
         </h1>
         <p>
-          Margot Robbie plays Barbie! The overzealous, fun-loving, classic doll!
+          Margot Robbie is Barbie! The overzealous, fun-loving, classic doll!
+          <br />
+          Ryan Gosling is Ken! His job is beach! (Whatever that means) <br />
+          Issa Rae (my personal favorite) is President of Barbie Land!
         </p>
-        <a href="https://en.wikipedia.org/wiki/Margot_Robbie"> Learn More </a>
+        <a
+          href="https://www.google.com/search?q=cast+of+barbie&rlz=1C5CHFA_enUS885US885&oq=barbie+movie&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyCggBEC4YsQMYgAQyCggCEAAYsQMYgAQyCggDEAAYsQMYgAQyCggEEAAYsQMYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg0MzEzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8&si=ACFMAn9YUMd0ZXgOPzfawCMT6Mu6ehGYog682vBTo7pmIExgL2Rv77pPI8cCDRAqYqSckOd8I2OLHbehYNKOgXvkFuuLwnw7nJwK-b6xcFLjd1kwEi2mXaK6Ie_okh24hTGt2Y-RfyvCKM7ujdfvirPuFxqtO8zO9WNEeHJ8stPTe5FCxzvHG1JdI1P0T0epIay_x04k6If6rpX0blNU-hcv_6gQgYHHDDKW301ZB0b0GHwRwun2giGMjzDrt0HaXaTfq6899p0c&ictx=1&ved=2ahUKEwi63c-J8aOBAxVqp4kEHV2RDsoQyNoBKAB6BAgUEAA"
+        >
+          Learn More
+        </a>
       </div>
       <div class="socialMedia">
         <a href="https://www.linkedin.com/in/nanagyekum/" style="--i: 1">
@@ -60,6 +93,11 @@
           <i class="bx bx-bold"></i>
         </a>
       </div>
+      <div class="vidNav">
+        <div class="Navbtns active"></div>
+        <div class="Navbtns"></div>
+        <div class="Navbtns"></div>
+      </div>
     </section>
     <script type="text/javascript">
       // Javascript for navigation menu
@@ -67,6 +105,27 @@
 
       menuBtn.addEventListener("click", () => {
         menuBtn.classList.toggle("active");
+      });
+
+      //Java script for vidslider nav
+      const btns = document.querySelectorAll(".Navbtns");
+      const slides = document.querySelectorAll(".vidSlider");
+      var vidNav = function (manual) {
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+      };
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          vidNav(i);
+        });
       });
     </script>
   </body>
